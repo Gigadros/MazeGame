@@ -13,3 +13,6 @@ This project was created with Unity and is currently a work in progress. The gam
 
 Standard Assets by Unity Technologies
 https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-32351
+
+NavMesh Components by Unity Technologies
+https://github.com/Unity-Technologies/NavMeshComponents
