@@ -170,12 +170,14 @@ MonoBehaviour:
   tileHeight: 4
   xOffset: 0
   zOffset: 0
+  mapSize: 100
+  loadFromTxt: 0
   level: {fileID: 1031928429573014, guid: cb417df037133704fb4622ffdf376cfe, type: 2}
   prefabs:
   - {fileID: 1563720453398240, guid: f037d0dd1f0c31040afe19fdd23c1f41, type: 2}
   - {fileID: 1943481831623470, guid: 01c50426ed17d154c810bbb8678aaf1d, type: 2}
   - {fileID: 1685055387943580, guid: 8cb1c09102497d7459884b1caa3f4530, type: 2}
-  - {fileID: 1109941826376652, guid: 922b38797d4b14f499fd73fdc9c31709, type: 2}
+  - {fileID: 0}
   - {fileID: 1478867894757666, guid: 05d59cfa70395844d88783e78701e4e1, type: 2}
   characters: XOSHC
   asciiMap:
