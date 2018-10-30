@@ -24,7 +24,6 @@ public class MapMaker : MonoBehaviour {
     private int steps;
     private string proceduralMap = "";
     private bool hasSpawn = false;
-    // private float wave;
 	
 	void Start() {
         GenerateMap(loadFromTxt);
@@ -44,7 +43,6 @@ public class MapMaker : MonoBehaviour {
             steps = mapSize * mapSize / 4;
             for (int i = 0; i < steps; i++) {
                 //move digger
-                //wave = Mathf.Sin(steps/mapSize) * 0.5f + 1f;
                 if (Random.Range(0f, 1f) > 0.75f) dir = Random.Range(0, 4);
                 switch (dir) {
                     case 0:
@@ -64,6 +62,16 @@ public class MapMaker : MonoBehaviour {
                 xPos = Mathf.Clamp(xPos, 1, mapSize - 2);
                 yPos = Mathf.Clamp(yPos, 1, mapSize - 2);
                 mapGrid[xPos, yPos] = 1; // set current position to floor
+            }
+            for (int y = 1; y < mapSize - 1; y++)
+            {
+                for (int x = 1; x < mapSize - 1; x++)
+                {
+                    if ((mapGrid[x, y] == 0) && (mapGrid[x + 1, y] == 1) && (mapGrid[x - 1, y] == 1) && (mapGrid[x, y + 1] == 1) && (mapGrid[x, y - 1] == 1))
+                    {
+                        mapGrid[x, y] = 1;
+                    }
+                }
             }
             for (int y = 1; y < mapSize-1; y++) {
                 for (int x = 1; x < mapSize-1; x++) {
